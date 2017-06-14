@@ -1,0 +1,25 @@
+{% extends "tasks/base.html" %}
+
+{% block title %}{{ list.name }} Task{% endblock %}
+
+{% block content %}
+
+    {% if user.is_staff %}
+        <h1>Delete task: {{ list.name }} ?</h1>
+
+
+        <p> Are you sure you want to do that?</p>
+
+        <form action="" method="post" accept-charset="utf-8">
+		    {% csrf_token %}
+            <input type="hidden" name="list" value="{{ list.id }}" id="some_name">
+            <p><input type="submit" name="delete-confirm" value="Do it! &rarr;" class="todo-button"> </p>
+        </form>
+
+        <a href="{% url 'tasks:task-lists' %}">Return to Task: {{ list.name }}</a>
+
+    {% else %}
+        <p>Sorry, you don't have permission to delete lists. Please contact your group administrator.</p>
+    {% endif %}
+
+{% endblock %}

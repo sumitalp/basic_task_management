@@ -1,0 +1,17 @@
+{% extends "tasks/base.html" %}
+
+{% block title %}{{ list_title }} Todo Lists{% endblock %}
+
+{% block content %}
+
+   <h1>Tasks Lists</h1>
+
+    <ul>
+        {% for task in task_list %}
+	            <li><a class="todo" href="{% url 'tasks:task_detail' task.id %}">{{ task.name }} </a></li>
+        {% endfor %}
+    </ul>
+
+     <p><a href="add/">Create new todo list</a></p>
+
+{% endblock %}
