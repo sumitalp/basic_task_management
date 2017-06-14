@@ -21,6 +21,6 @@ lightweight SQL (SQLite).
 - Then go to project directory
 - And run `pip3 install -r requirements.txt` 
 
-### Login credential
+### Test Login credential
 - username: ahsan
 - password: 123456
