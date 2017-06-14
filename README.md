@@ -19,7 +19,10 @@ lightweight SQL (SQLite).
 ## Installation
 - Download this git repo
 - Then go to project directory
-- And run `pip3 install -r requirements.txt` 
+- And run `pip3 install -r requirements.txt`
+
+## To Run project
+Go to project folder and run `python3 manage.py runserver 9999`
 
 ### Test Login credential
 - username: ahsan
