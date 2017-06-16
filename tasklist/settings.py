@@ -24,9 +24,9 @@ PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 SECRET_KEY = '=9y=m$k6$u95x%g$$=!nu+90qn6s^2h&$%e5*an6z$6)1dq=at'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 LOGIN_REDIRECT_URL = '/tasks'
 
